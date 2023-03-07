@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: white;
+  width: 100vw;
+  margin: 0px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  width: 100%;
+  max-width: 1200px;
+  background: rgb(228, 233, 237);
+  display: flex;
+  padding: 1.4em;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.main .title {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.main .title > div {
+  width: 100%;
+  padding: 0.4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+}
+
+.description {
+  width: 100%;
+}
+.description #img-div {
+  width: 100%;
+  margin: 1rem;
+  margin-right: 2rem;
+  max-width: 600px;
+  max-height: 465px;
+  background: white;
+  border-radius: 5px;
+  padding: 0.1em;
+  float: left;
+}
+.description #img-div .img-div-image {
+  width: 100%;
+}
+.description #img-div .img-div-text {
+  padding: 0.5em;
+  width: 100%;
+}
+.description #image {
+  max-width: 100%;
+  display: block;
+}
+.description #tribute-info {
+  width: 95%;
+  height: 80%;
+  text-align: justify;
+}
+.description #tribute-info b {
+  font-size: 1.2rem;
+}
+.description #tribute-info .quote-div {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.description #tribute-info .quote-div blockquote {
+  padding-left: 1rem;
+  max-width: 600px;
+  border-left: 8px solid rgb(157, 184, 218);
+}
+.description #tribute-info .quote-div cite {
+  display: block;
+  font-weight: 700;
+  margin-top: 10px;
+  color: rgb(65, 103, 150);
+}
+.description #tribute-info li {
+  margin-bottom: 0.2em;
+}
+.description #tribute-info ul {
+  margin-bottom: 0.2em;
+}
+.description #tribute-link {
+  color: rgb(103, 128, 159);
+}
+.description #tribute-link:active {
+  color: rgb(108, 122, 137);
+}
+
+@media (max-width: 900px) {
+  .description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .description #img-div .img-div-image {
+    height: none;
+    width: 100%;
+  }
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,258 @@
+* {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */ /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+  outline: none;
+  --main-background: #48435c; /*dark purple*/
+  --main-color: #edffec; /*white*/
+  --temp-color: #9792e3; /*light purple*/
+  --sec-color: #61e786; /*lightgreen*/
+  --tertiary-color: #5a5766; /*dark grey*/
+}
+
+body {
+  background: var(--main-color);
+  color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Source Sans Pro", sans-serif;
+  transition: ease-in-out 0.6s;
+}
+
+.active {
+  background: var(--main-background);
+  background-image: url("https://i.ibb.co/4456nBM/robert-gomez-zk2q-Gw-Rj5-Ls-unsplash.jpg[/img][/url]");
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  background-size: cover;
+}
+
+.active .div-title {
+  color: var(--main-color);
+}
+
+.toggle {
+  width: 50px;
+  height: 20px;
+  background: none;
+  padding: 0.3em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 2px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mode {
+  width: 90%;
+  height: 20px;
+  position: relative;
+  background: var(--tertiary-color);
+  border-radius: 30px;
+}
+
+.mode-label {
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  border-radius: 8px;
+  background: white;
+  z-index: 2;
+  transition: ease-in-out 0.6s;
+}
+
+.mode input {
+  opacity: 0;
+  cursor: pointer;
+  transition: ease-in-out 0.6s;
+}
+
+.far {
+  color: black;
+  position: absolute;
+  top: 20%;
+  font-size: 0.9rem;
+}
+
+.fa-moon {
+  left: 60%;
+  color: white;
+}
+
+.fa-sun {
+  left: 3px;
+  color: orange;
+}
+
+.toggle-active .mode {
+  background: var(--main-color);
+}
+.toggle-active .mode-label {
+  background: var(--tertiary-color);
+  left: 25px;
+}
+.toggle-active .fa-moon {
+  color: var(--main-background);
+}
+
+.main {
+  width: 70%;
+  max-width: 600px;
+  min-width: 320px;
+  border-radius: 5px;
+}
+
+.div-survey-form {
+  background: var(--tertiary-color);
+  width: 100%;
+  border-radius: 5px;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.survey-form {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.div-title {
+  min-height: 100px;
+  width: 100%;
+  font-size: 1.3rem;
+  color: var(--temp-color);
+  text-align: center;
+  background: none;
+}
+
+.div-title .h1-title {
+  text-transform: lowercase;
+  font-family: "Oswald", sans-serif;
+}
+
+.div-title .description {
+  font-size: 1.1rem;
+}
+
+/*media query*/
+@media (max-width: 650px) {
+  .div-title {
+    font-size: 1rem;
+  }
+  .div-title .description {
+    font-size: 0.8rem;
+  }
+  .main {
+    font-size: 0.9rem;
+  }
+  .far {
+    font-size: 0.9rem;
+  }
+}
+.inputs {
+  width: 98%;
+  margin: 0.5rem;
+}
+
+.inputs label {
+  display: block;
+}
+
+.inputs > input,
+.inputs > select {
+  padding: 0.4em;
+  border-radius: 3px;
+  border: none;
+  width: 95%;
+  font-size: 0.9em;
+}
+
+.inputs > select {
+  width: calc(95% + 0.8em);
+}
+
+.inputs > input:focus {
+  border: none;
+  box-shadow: 0px 0px 0px 2px var(--temp-color);
+}
+
+.inputs > input label {
+  margin-bottom: 3px;
+}
+
+.inputs .radio-input label {
+  display: block;
+}
+
+.inputs .radio-input label input[type=radio] {
+  margin-right: 5px;
+}
+
+.option label {
+  margin-bottom: 3px;
+}
+
+.selectable-checkbox input[type=checkbox] {
+  margin-right: 6px;
+}
+
+.comment textarea {
+  width: 100%;
+}
+
+.div-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.div-submit .submit {
+  width: 100%;
+  padding: 0.4em;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: var(--main-color);
+  color: var(--sec-color);
+  border: 2px solid var(--sec-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.div-submit .submit.submit:hover::before {
+  left: 120%;
+}
+
+.submit::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  left: -20%;
+  width: 20px;
+  background: rgba(255, 255, 255, 0.5);
+  height: 50px;
+  transform: skewX(-50deg);
+  filter: blur(1px);
+  transition: 0.8s ease-in-out;
+}
+
+.div-submit .submit:hover {
+  background: var(--sec-color);
+  color: var(--main-color);
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,128 @@
+html {
+  font-size: 62.5%;
+  --main-background:#FDFDFF;
+  --main-color:#393D3F;
+  --code-background:#C6C5B9;
+  --temp-color:#9ABCC1;
+  --text-color:#546A7B;
+}
+
+body {
+  background: var(--main-background);
+  color: var(--main-color);
+  font-size: 1.3rem;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+  min-width: 300;
+}
+
+header {
+  font-style: bold;
+  font-size: 3.5rem;
+  color: var(--text-color);
+  font-family: "Cormorant Garamond", serif;
+}
+
+code {
+  background: var(--code-background);
+  color: var(--main-color);
+  width: 90%;
+  font-size: 1.5rem;
+  padding: 1rem;
+  margin: 0.5em;
+  white-space: pre-line;
+  line-height: 2;
+  display: block;
+  text-align: left;
+  white-space: pre-line;
+  position: relative;
+  word-break: normal;
+  word-wrap: normal;
+  border-radius: 2px;
+}
+
+#navbar {
+  margin: 0;
+  padding: 0;
+  min-width: 300px;
+}
+#navbar header {
+  padding: 0.2rem;
+  text-align: center;
+}
+#navbar ul {
+  width: 90%;
+  font-size: 1.6rem;
+  list-style: none;
+}
+#navbar ul li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 95%;
+  padding: 0.2em;
+  margin-right: 1rem;
+  border-bottom: 1px solid black;
+}
+#navbar ul li:first-child {
+  border-top: 1px solid black;
+}
+#navbar ul li a {
+  text-decoration: none;
+  color: var(--main-color);
+}
+#navbar ul li a:active {
+  color: var(--temp-color);
+}
+#navbar ul li:hover {
+  color: red;
+}
+
+#main-doc {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1.5rem;
+  flex-direction: column;
+}
+#main-doc > section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 1em 2em;
+}
+#main-doc > section .content {
+  width: 95%;
+}
+
+#main-doc header {
+  margin-left: 0.4em;
+  align-self: flex-start;
+}
+
+#main-doc .main-section {
+  width: 100%;
+}
+
+/*media queries*/
+@media (min-width: 813px) {
+  body {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  #navbar {
+    overflow-Y: scroll;
+    overflow-X: hidden;
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    height: 100vh;
+    z-index: 4;
+  }
+  #main-doc {
+    position: relative;
+    margin-left: 350px;
+  }
+}/*# sourceMappingURL=index.css.map */
